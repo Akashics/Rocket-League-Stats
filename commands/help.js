@@ -12,13 +12,13 @@ r!leaderboard   :: Surf the ranks of others!
 r!ping          :: Prints latency times.
 r!shrug         :: ¯\\_(ツ)_/¯
 r!search        :: Lookup a player based on Steam, PS4 or Xbox One Tags.
-r!stats         :: Pull stats from rocketleaguestats.com (DEPERECATED)
 
 
 r!leaderboard <stat|ranked> <unit> <place (defaults to 1st)>
 r!search <steam|ps4|xbox> <username>
 
-Bot created by Kashall#1307, API provided by RocketLeagueStats.com`, { code: "asciidoc" });
+Bot created by Kashall#1307, API provided by RocketLeagueStats.com
+Sourcecode Available on Github in Kashalls/Rocket-League-Stats`, { code: "asciidoc" });
     } catch (e) {
         message.channel.send(e);
     }
