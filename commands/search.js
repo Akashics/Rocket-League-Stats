@@ -17,12 +17,10 @@ exports.run = (client, message, args) => {
             let username = isNaN(args[1]);
             if (username == false) {
                 try {
-                    message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/steam/" + args[1] + ".png"] });
-                    return message.channel.stopTyping();
+                    return message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/steam/" + args[1] + ".png"] });
                 } catch (e) {
                     console.log(e)
                     message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/steam/0.png"] });
-                    message.channel.stopTyping();
                     return message.reply(`:x: An error has occured: ${e}`);
                 }
 
@@ -33,12 +31,9 @@ exports.run = (client, message, args) => {
                         if (!error && response.statusCode === 200) {
                             const steamID64 = JSON.parse(body).response.steamid;
                             try {
-                                message.channel.startTyping();
-                                message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/steam/" + steamID64 + ".png"] });
-                                return message.channel.stopTyping();
+                                return message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/steam/" + steamID64 + ".png"] });
                             } catch (e) {
                                 message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/steam/0.png"] });
-                                message.channel.stopTyping();
                                 return message.reply(`:x: An error has occured: ${e}`);
                             }
                         }
@@ -51,25 +46,19 @@ exports.run = (client, message, args) => {
         if (args[0] === 'ps4') {
             if (!args[1]) return message.channel.send(help);
             try {
-                message.channel.startTyping();
                 message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/ps4/" + args[1] + ".png"] });
-                return message.channel.stopTyping();
             } catch (e) {
                 message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/ps4/0.png"] });
-                message.channel.stopTyping();
                 return message.reply(`:x: An error has occured: ${e}`);
             }
         }
         if (args[0] === 'xbox') {
             if (!args[1]) return message.channel.send(help);
             try {
-                message.channel.startTyping();
                 message.channel.send('The API we use to receive data for gamertags is a bit slow. This will take a little bit.');
-                message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/xboxone/" + args[1] + ".png"] });
-                return message.channel.stopTyping();
+                return message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/xboxone/" + args[1] + ".png"] });
             } catch (e) {
                 message.channel.send({ files: ["http://signature.rocketleaguestats.com/normal/xboxone/0.png"] });
-                message.channel.stopTyping();
                 return message.reply(`:x: An error has occured: ${e}`);
             }
         }
