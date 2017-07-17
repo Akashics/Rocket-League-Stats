@@ -26,11 +26,14 @@ Once finished:
 - Rename `config.json.example` to `config.json`
 - Edit `config.json` and enter your token and other details as indicated.
 
-## Getting Your Discord Token
+## Getting Setup
 
-1. Follow the guide [here](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token).
+1. You will need to create a Discord Bot. Follow the guide [here](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) and place your token in the config.json.
+2. Obtain a [Steam Developer Key](https://steamcommunity.com/dev/apikey) and place that also into your config.json. This step is mandatory as this allows you to lookup players using Steam as their platform.
+3. Register at [RocketLeagueStats.com](https://developers.rocketleaguestats.com/user/register) and get an API Key. By now, you should know where to put it.
+4. If you haven't already, change the prefix to whatever you want, the bot will automagically respond after a reboot.
 
-> **KEEP YOUR TOKEN SECRET, AND NEVER SHARE IT WITH ANYONE**
+> **KEEP YOUR SECRETS A SECRET, AND NEVER SHARE THEM WITH ANYONE**
 
 ## Starting the Bot
 
