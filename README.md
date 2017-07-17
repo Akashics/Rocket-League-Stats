@@ -46,4 +46,6 @@ To start the bot, in the command prompt, run the following command:
 
 For support join the [RocketLeagueStats](https://discord.gg/fJ5dd25) Discord.
 
+![This APP uses RocketLeagueStats API](http://i.imgur.com/nuyG85X.png)
+
 
