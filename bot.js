@@ -36,7 +36,7 @@ client.on("message", message => {
   let command = message.content.split(" ")[0];
   command = command.slice(config.prefix.length);
 
-  let args = message.content.toLowerCase().split(" ").slice(1);
+  let args = message.content.split(" ").slice(1);
   let commandFile = commands.get(command);
   if (!commandFile) {
     return;
