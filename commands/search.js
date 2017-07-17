@@ -26,7 +26,6 @@ exports.run = (client, message, args) => {
 
             } else {
                 try {
-                    message.channel.startTyping();
                     request('http://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key=' + config.steamKey + '&vanityurl=' + args[1], (error, response, body) => {
                         if (!error && response.statusCode === 200) {
                             const steamID64 = JSON.parse(body).response.steamid;
